@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/mingfeng/ros_workspace/simple_udp/build/devel/setup.sh

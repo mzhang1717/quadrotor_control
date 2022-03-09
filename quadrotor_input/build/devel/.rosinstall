@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/mingfeng/ros_workspace/quadrotor_input/build/devel/setup.sh

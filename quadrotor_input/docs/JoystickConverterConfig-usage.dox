@@ -1,0 +1,11 @@
+\subsubsection usage Usage
+\verbatim
+<node name="quadrotor_input" pkg="quadrotor_input" type="quadrotor_input">
+  <param name="input1" type="double" value="0.0" />
+  <param name="output1" type="double" value="0.0" />
+  <param name="input2" type="double" value="0.0" />
+  <param name="output2" type="double" value="0.0" />
+  <param name="output3" type="double" value="0.0" />
+</node>
+\endverbatim
+

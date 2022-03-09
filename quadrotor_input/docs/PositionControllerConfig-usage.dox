@@ -1,0 +1,77 @@
+\subsubsection usage Usage
+\verbatim
+<node name="quadrotor_input" pkg="quadrotor_input" type="quadrotor_input">
+  <param name="xy_active" type="bool" value="True" />
+  <param name="tau_enabled" type="bool" value="False" />
+  <param name="vertical_tau_only" type="bool" value="True" />
+  <param name="vertical_offset" type="double" value="0.0" />
+  <param name="horizontal_offset" type="double" value="0.0" />
+  <param name="tf" type="double" value="0.0" />
+  <param name="kp_x_scale" type="double" value="0.0" />
+  <param name="ki_x_scale" type="double" value="0.0" />
+  <param name="kd_x_scale" type="double" value="0.0" />
+  <param name="kp_z_scale" type="double" value="0.0" />
+  <param name="ki_z_scale" type="double" value="0.0" />
+  <param name="kd_z_scale" type="double" value="0.0" />
+  <param name="xy_p" type="double" value="0.0" />
+  <param name="xy_i" type="double" value="0.0" />
+  <param name="xy_d" type="double" value="0.0" />
+  <param name="xy_i_min" type="double" value="0.0" />
+  <param name="xy_i_max" type="double" value="0.0" />
+  <param name="vxy_p" type="double" value="0.0" />
+  <param name="vxy_i" type="double" value="0.0" />
+  <param name="vxy_d" type="double" value="0.0" />
+  <param name="vxy_i_min" type="double" value="0.0" />
+  <param name="vxy_i_max" type="double" value="0.0" />
+  <param name="z_p" type="double" value="0.0" />
+  <param name="z_i" type="double" value="0.0" />
+  <param name="z_d" type="double" value="0.0" />
+  <param name="z_i_min" type="double" value="0.0" />
+  <param name="z_i_max" type="double" value="0.0" />
+  <param name="vz_p" type="double" value="0.0" />
+  <param name="vz_i" type="double" value="0.0" />
+  <param name="vz_d" type="double" value="0.0" />
+  <param name="vz_i_min" type="double" value="0.0" />
+  <param name="vz_i_max" type="double" value="0.0" />
+  <param name="yaw_p" type="double" value="0.0" />
+  <param name="yaw_i" type="double" value="0.0" />
+  <param name="yaw_d" type="double" value="0.0" />
+  <param name="yaw_i_min" type="double" value="0.0" />
+  <param name="yaw_i_max" type="double" value="0.0" />
+  <param name="xyspeedLimit" type="double" value="0.0" />
+  <param name="pitchLimit" type="double" value="0.0" />
+  <param name="rollLimit" type="double" value="0.0" />
+  <param name="yawrateLimit" type="double" value="0.0" />
+  <param name="zspeedLimit" type="double" value="0.0" />
+  <param name="ascendingSpeedMax" type="double" value="0.0" />
+  <param name="descendingSpeedMax" type="double" value="0.0" />
+  <param name="touchdownSpeedMax" type="double" value="0.0" />
+  <param name="throttleHighLimit" type="double" value="0.0" />
+  <param name="throttleLowLimit" type="double" value="0.0" />
+  <param name="base_throttle_start" type="double" value="0.0" />
+  <param name="voltage_start" type="double" value="0.0" />
+  <param name="base_throttle_end" type="double" value="0.0" />
+  <param name="voltage_end" type="double" value="0.0" />
+  <param name="mass" type="double" value="2.0" />
+  <param name="x_des" type="double" value="0.0" />
+  <param name="y_des" type="double" value="0.0" />
+  <param name="z_des" type="double" value="0.2" />
+  <param name="yaw_des" type="double" value="0.0" />
+  <param name="pid_xy_limit" type="double" value="0.0" />
+  <param name="cmd_xy_max" type="double" value="0.0" />
+  <param name="cmd_xy_min" type="double" value="0.0" />
+  <param name="pid_vxy_limit" type="double" value="0.0" />
+  <param name="cmd_vxy_max" type="double" value="0.0" />
+  <param name="cmd_vxy_min" type="double" value="0.0" />
+  <param name="pid_z_limit" type="double" value="0.0" />
+  <param name="cmd_z_max" type="double" value="0.0" />
+  <param name="cmd_z_min" type="double" value="0.0" />
+  <param name="pid_vz_limit" type="double" value="0.0" />
+  <param name="cmd_vz_max" type="double" value="0.0" />
+  <param name="cmd_vz_min" type="double" value="0.0" />
+  <param name="pid_yaw_limit" type="double" value="0.0" />
+  <param name="cmd_yaw_max" type="double" value="0.0" />
+  <param name="cmd_yaw_min" type="double" value="0.0" />
+</node>
+\endverbatim
+

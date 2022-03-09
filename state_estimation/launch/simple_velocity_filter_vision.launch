@@ -1,0 +1,6 @@
+<launch>
+  <node name="simple_velocity_filter" pkg="state_estimation" type="simple_velocity_filter" respawn="false" output="screen" clear_params="true">
+    <remap from="rel_pose_cov" to="/mcptam/tracker_pose_cov" />
+    <remap from="simple_velocity_filter/velocity" to="x8/output/simple_velocity" />
+  </node>
+</launch>

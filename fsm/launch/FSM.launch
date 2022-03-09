@@ -1,0 +1,87 @@
+<launch>
+
+<!-- Start the Finite-State-Machine while remapping the topics -->
+
+ node name="FSM"              pkg="fsm"                type="Main_AutoPilot.py" output = "screen" launch-prefix = "xterm -geometry 200x35+10+1000 -e"  
+
+<node name="FSM"              pkg="fsm"                type="Main_AutoPilot.py" output = "screen" >
+	<remap from = "battery"         to = "x8/output/battery" /> 
+    
+    
+<!--
+    <remap from = "poseStamped"     to = "x8/output/pose" /> 
+-->
+    <remap from = "poseStamped"     to = "multi_box/pose" />
+    <remap from = "ControllerError" to = "controller/error" /> 
+    <remap from = "RadioControl"    to = "joystick_converter/radio_control" />
+    <remap from = "ControllerStatus" to = "controller/controller_status" /> 
+
+
+    <param name = "default_source" value = "px4flow"  type = "string"/>
+        
+    <param name = "source_1" value = "mcptam" type = "string"/>
+    <param name = "frame_id_1" value = "world_mcptam" type = "string" />
+    <rosparam param="topics_1">[pose_mcptam, velocity_mcptam]</rosparam>
+
+    <param name = "source_2" value = "px4flow" type = "string"/>
+    <param name = "frame_id_2" value = "world_px4flow" type= "string" />
+    <rosparam param="topics_2">[pose_px4flow, velocity_px4flow]</rosparam>
+
+
+    <!--rosparam param = "wp_list"> [[3.0, 1.0, 2.0, 90.0]] </rosparam -->
+
+
+<rosparam param="wp_list">[[2.4, 1.3, 2.0, -90.0], [2.4, -2.7, 2.0, -90.0],  [-1.6, -2.7, 4.0, -90.0], [-1.6, 1.3, 4.0, -90.0], [2.4, 1.3, 2.0, 0.0], [0.4, -0.7, 2.0, -90.0]]</rosparam>
+
+<!--
+    <rosparam param="wp_list">[[1.1, 0.0, 2.0, -90.0], [1.1, -1.4, 2.0, -90.0],  [-0.3, -1.4, 2.0, -90.0], [-0.3, 0.0, 2.0, -90.0], [0.4, -0.7, 2.0, -90.0]]</rosparam>
+-->
+
+
+
+<!--
+    <rosparam param = "wp_list"> [[-1.5, 0.3, 1.5, 0.0],[-2.0, -0.3, 1.5, 0.0],[-2.2, -0.5, 2.0, 0.0]] </rosparam>
+-->
+
+
+    <!-- rosparam param = "wp_list"> [[0.0, 0.0, 2.0, 0.0],[0.0, 0.0, 2.0, -90.0],[0.0, -3.0, 3.0, -90.0],[-3.0, -3.0, 3.0, -90.0],[-3.0, 0.0, 3.0, -90.0],[-3.0, 0.0, 3.0, 0.0],[0.0, 0.0, 3.0, 0.0]] </rosparam -->
+    
+    <!-- rosparam param = "wp_list"> [[0.0, 0.0, 2.0, -50.0],[0.0, 0.0, 2.0, -140.0],[0.0, -1.0, 2.5, -140.0],[-1.0, -1.0, 2.5, -140.0],[-1.0, -0.0, 2.5, -140.0],[-1.0, -0.0, 2.5, -50.0],[-0.0, -0.0, 2.5, -50.0]] </rosparam -->
+    
+    
+    <!-- rosparam param = "wp_list"> [[10.0, -5.0, 3.0, 0.0],[10.0, -5.0, 5.5, 0.0],[10.0, -5.0, 5.5, 90.0],[2.0, 3.0, 5.5, 90.0],[2.0, 3.0, 2.5, 0.0]] </rosparam -->
+    
+    <!-- rosparam param = "wp_list"> [[20.0, -5.0, 5.0, 0.0],[20.0, -5.0, 8.5, 0.0],[10.0, 3.0, 8.5, 0.0],[10.0, 3.0, 5.0, 0.0]] </rosparam -->
+    
+    <!-- rosparam param = "wp_list"> [[0.1, 0.0, 1.2, 0.0],[0.1, 0.0, 1.7, 0.0],[0.1, 0.0, 1.7, -60.0],[0.4, -2.0, 1.7, -60.0],[0.4, -2.0, 1.2, -60.0]] </rosparam -->
+    
+    <!-- rosparam param = "wp_list"> [[0.0, 0.0, 1.3, 0.0],[0.0, 0.0, 1.2, 0.0],[0.0, 0.0, 1.1, 0.0],[0.0, 0.0, 1.0, 0.0],[0.0, 0.0, 0.9, 0.0],,[0.0, 0.0, 0.8, 0.0],[0.0, 0.0, 0.7, 0.0],[0.0, 0.0, 0.6, 0.0],[0.0, 0.0, 0.5, 0.0],[0.0, 0.0, 0.4, 0.0],[0.0, 0.0, 0.3, 0.0]] </rosparam -->
+    
+    <!-- rosparam param = "wp_list"> [[-1.7, 0.13, 1.02, 0.0], [-1.7, 0.13, 0.97, 0.0], [-1.7, 0.13, 0.92, 0.0], [-1.7, 0.13, 0.87, 0.0], [-1.7, 0.13, 0.82, 0.0], [-1.7, 0.13, 0.77, 0.0],[-1.7, 0.13, 0.72, 0.0], [-1.7, 0.13, 0.67, 0.0],[-1.7, 0.13, 0.62, 0.0], [-1.7, 0.13, 0.57, 0.0], [-1.7, 0.13, 0.52, 0.0], [-1.7, 0.13, 0.47, 0.0], [-1.7, 0.13, 0.42, 0.0], [-1.7, 0.13, 0.37, 0.0], [-1.7, 0.13, 0.32, 0.0], [-1.7, 0.13, 0.27, 0.0], [-1.7, 0.13, 0.22, 0.0], [-1.7, 0.13, 0.17, 0.0], [-1.7, 0.13, 0.12, 0.0], [-1.7, 0.13, 0.07, 0.0]] </rosparam -->
+    
+    <!-- rosparam param = "wp_list"> [[-1.7, 0.13, 1.02, 0.0], [-1.7, 0.13, 0.92, 0.0],  [-1.7, 0.13, 0.82, 0.0], [-1.7, 0.13, 0.72, 0.0], [-1.7, 0.13, 0.62, 0.0],  [-1.7, 0.13, 0.52, 0.0], [-1.7, 0.13, 0.42, 0.0],  [-1.7, 0.13, 0.32, 0.0],  [-1.7, 0.13, 0.22, 0.0], [-1.7, 0.13, 0.17, 0.0], [-1.7, 0.13, 0.12, 0.0], [-1.7, 0.13, 0.07, 0.0]] </rosparam -->
+    
+    
+    <!-- rosparam param = "wp_list"> [[-1.7, 0.13, 0.5, 0.0], [-1.7, 0.13, 0.2, 0.0]] </rosparam -->
+    
+    <param name = "ceiling_altitude" value = "2.0" type="double" />
+    <param name = "safe_altitude" value="0.25" type="double" />
+    <param name = "home_altitude" value="1.5" type="double" />
+    <param name = "ground_level" value="0.3" type="double" />
+    <param name = "throttle_threshold" value="0.1" type="double" />
+    <param name = "safe_voltage" value="13.3" type="double" />
+    <param name = "mission_maxtime" value="3000" type="double" />
+    
+    <param name = "meanerror_tolerance" value="0.2" type="double" />
+    <param name = "standarddeviation_tolerance" value="0.3" type="double" />
+    <param name = "queue_size" value="100"  type="int" />
+    
+</node>
+
+<!-- Autonomous Menifold Indicator Node -->
+ <node name="manifold_indicator"  pkg="fsm"  type="fsm_manifold_indicator.py" output = "screen"  >
+    <remap from = "topic_in"      to = "/FSM/smach/container_status" /> 
+    <remap from = "topic_out"     to = "/autonomous_mode" /> 
+</node> 
+
+</launch>

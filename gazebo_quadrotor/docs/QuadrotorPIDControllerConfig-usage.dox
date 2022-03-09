@@ -1,0 +1,15 @@
+\subsubsection usage Usage
+\verbatim
+<node name="gazebo_quadrotor" pkg="gazebo_quadrotor" type="gazebo_quadrotor">
+  <param name="roll_p" type="double" value="0.1" />
+  <param name="roll_i" type="double" value="0.0" />
+  <param name="roll_d" type="double" value="0.0" />
+  <param name="pitch_p" type="double" value="0.1" />
+  <param name="pitch_i" type="double" value="0.0" />
+  <param name="pitch_d" type="double" value="0.0" />
+  <param name="yaw_p" type="double" value="0.1" />
+  <param name="yaw_i" type="double" value="0.0" />
+  <param name="yaw_d" type="double" value="0.0" />
+</node>
+\endverbatim
+

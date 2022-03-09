@@ -1,0 +1,6 @@
+bool running
+nav_msgs/Path path
+float64[] gains
+
+---
+bool success

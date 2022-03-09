@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<sdf version="1.3">
+  <world name="default">
+    
+    <physics type="ode">
+      <update_rate>200</update_rate>
+      <ode>
+        <solver>
+          <dt>0.005</dt>
+        </solver>
+      </ode>
+    </physics>
+    
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- A ground plane -->
+
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+
+<!--
+    <include>
+      <uri>file://terrain</uri>
+    </include>
+-->
+
+    
+    <include>
+      <uri>file://x8</uri>
+    </include>
+
+    
+  </world>
+</sdf>

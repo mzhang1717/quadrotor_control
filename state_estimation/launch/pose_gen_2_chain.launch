@@ -1,0 +1,13 @@
+<launch>
+
+  <node name="pose_gen1" pkg="state_estimation" type="pose_generator" respawn="false" output="screen" clear_params="true">
+    <param name="world_name" type="string" value="$(arg world)" />
+    <param name="object_name" type="string" value="$(arg frame1)" />
+  </node>
+  
+  <node name="pose_gen2" pkg="state_estimation" type="pose_generator" respawn="false" output="screen" clear_params="true">
+    <param name="world_name" type="string" value="$(arg frame1)" />
+    <param name="object_name" type="string" value="$(arg frame2)" />
+  </node>
+
+</launch>

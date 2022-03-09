@@ -1,0 +1,76 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~xy_active" : \b [bool] XY control active min: False, default: True, max: True
+- \b "~tau_enabled" : \b [bool] Tau control active min: False, default: False, max: True
+- \b "~vertical_tau_only" : \b [bool] Only vertical tau min: False, default: True, max: True
+- \b "~vertical_offset" : \b [double] Vertical offset for Tau landing min: -10.0, default: 0.0, max: 10.0
+- \b "~horizontal_offset" : \b [double] Horizontal offset for Tau landing min: -10.0, default: 0.0, max: 10.0
+- \b "~tf" : \b [double] Desired time for Tau maneuver min: 3.0, default: 0.0, max: 30.0
+- \b "~kp_x_scale" : \b [double] Scaling factor for Tau controller, kp_x min: 0.01, default: 0.0, max: 100.0
+- \b "~ki_x_scale" : \b [double] Scaling factor for Tau controller, ki_x min: 0.01, default: 0.0, max: 100.0
+- \b "~kd_x_scale" : \b [double] Scaling factor for Tau controller, kd_x min: 0.01, default: 0.0, max: 100.0
+- \b "~kp_z_scale" : \b [double] Scaling factor for Tau controller, kp_z min: 0.01, default: 0.0, max: 100.0
+- \b "~ki_z_scale" : \b [double] Scaling factor for Tau controller, ki_z min: 0.01, default: 0.0, max: 100.0
+- \b "~kd_z_scale" : \b [double] Scaling factor for Tau controller, kd_z min: 0.01, default: 0.0, max: 100.0
+- \b "~xy_p" : \b [double] XY Pos Proportional Gain min: 0.0, default: 0.0, max: 10.0
+- \b "~xy_i" : \b [double] XY Pos Integral Gain min: 0.0, default: 0.0, max: 10.0
+- \b "~xy_d" : \b [double] XY Pos Derivative Gain min: 0.0, default: 0.0, max: 10.0
+- \b "~xy_i_min" : \b [double] XY Pos Integral Min Limit min: -10.0, default: 0.0, max: 0.0
+- \b "~xy_i_max" : \b [double] XY Pos Integral Max Limit min: 0.0, default: 0.0, max: 10.0
+- \b "~vxy_p" : \b [double] XY Speed Proportional Gain min: 0.0, default: 0.0, max: 10.0
+- \b "~vxy_i" : \b [double] XY Speed Integral Gain min: 0.0, default: 0.0, max: 10.0
+- \b "~vxy_d" : \b [double] XY Speed Derivative Gain min: 0.0, default: 0.0, max: 10.0
+- \b "~vxy_i_min" : \b [double] XY Speed Integral Min Limit min: -10.0, default: 0.0, max: 0.0
+- \b "~vxy_i_max" : \b [double] XY Speed Integral Max Limit min: 0.0, default: 0.0, max: 10.0
+- \b "~z_p" : \b [double] Z Pos Proportional Gain min: 0.0, default: 0.0, max: 10.0
+- \b "~z_i" : \b [double] Z Pos Integral Gain min: 0.0, default: 0.0, max: 10.0
+- \b "~z_d" : \b [double] Z Pos Derivative Gain min: 0.0, default: 0.0, max: 10.0
+- \b "~z_i_min" : \b [double] Z Pos Integral Min Limit min: -10.0, default: 0.0, max: 0.0
+- \b "~z_i_max" : \b [double] Z Pos Integral Max Limit min: 0.0, default: 0.0, max: 10.0
+- \b "~vz_p" : \b [double] Z Speed Proportional Gain min: 0.0, default: 0.0, max: 10.0
+- \b "~vz_i" : \b [double] Z Speed Integral Gain min: 0.0, default: 0.0, max: 10.0
+- \b "~vz_d" : \b [double] Z Speed Derivative Gain min: 0.0, default: 0.0, max: 10.0
+- \b "~vz_i_min" : \b [double] Z Speed Integral Min Limit min: -10.0, default: 0.0, max: 0.0
+- \b "~vz_i_max" : \b [double] Z Speed Integral Max Limit min: 0.0, default: 0.0, max: 10.0
+- \b "~yaw_p" : \b [double] Yaw Angle Proportional Gain min: 0.0, default: 0.0, max: 10.0
+- \b "~yaw_i" : \b [double] Yaw Angle Integral Gain min: 0.0, default: 0.0, max: 10.0
+- \b "~yaw_d" : \b [double] Yaw Angle Derivative Gain min: 0.0, default: 0.0, max: 10.0
+- \b "~yaw_i_min" : \b [double] Yaw Angle Integral Min Limit min: -1.0, default: 0.0, max: 0.0
+- \b "~yaw_i_max" : \b [double] Yaw Angle Integral Max Limit min: 0.0, default: 0.0, max: 1.0
+- \b "~xyspeedLimit" : \b [double] Horizontal speed limit (m/s) min: 0.0, default: 0.0, max: 3.0
+- \b "~pitchLimit" : \b [double] Pitch command limit (rad) min: 0.0, default: 0.0, max: 0.5
+- \b "~rollLimit" : \b [double] Roll command limit (rad) min: 0.0, default: 0.0, max: 0.5
+- \b "~yawrateLimit" : \b [double] Yaw rate command limit (rad/s) min: 0.0, default: 0.0, max: 0.5
+- \b "~zspeedLimit" : \b [double] Vertical speed limit (m/s) min: 0.0, default: 0.0, max: 2.0
+- \b "~ascendingSpeedMax" : \b [double] Ascending speed limit during take-off (m/s) min: 0.0, default: 0.0, max: 1.0
+- \b "~descendingSpeedMax" : \b [double] Descending speed limit during landing (m/s) min: 0.0, default: 0.0, max: 1.0
+- \b "~touchdownSpeedMax" : \b [double] Descending speed limit before touch down during  landing (m/s) min: 0.0, default: 0.0, max: 1.0
+- \b "~throttleHighLimit" : \b [double] Upper limit of throttle (rad/s) min: 0.0, default: 0.0, max: 1.0
+- \b "~throttleLowLimit" : \b [double] Lower limit of throttle (rad/s) min: 0.0, default: 0.0, max: 0.5
+- \b "~base_throttle_start" : \b [double] Base Throttle Start min: 0.0, default: 0.0, max: 1.0
+- \b "~voltage_start" : \b [double] Voltage Start min: 10.0, default: 0.0, max: 20.0
+- \b "~base_throttle_end" : \b [double] Base Throttle End min: 0.0, default: 0.0, max: 1.0
+- \b "~voltage_end" : \b [double] Voltage End min: 10.0, default: 0.0, max: 20.0
+- \b "~mass" : \b [double] Aircraft Mass min: 0.1, default: 2.0, max: 10.0
+- \b "~x_des" : \b [double] X position min: -5.0, default: 0.0, max: 5.0
+- \b "~y_des" : \b [double] Y position min: -5.0, default: 0.0, max: 5.0
+- \b "~z_des" : \b [double] Z position min: -2.0, default: 0.2, max: 10.0
+- \b "~yaw_des" : \b [double] Yaw Angle min: -180.0, default: 0.0, max: 180.0
+- \b "~pid_xy_limit" : \b [double] Limit of PID XY Command (abs) min: 0.0, default: 0.0, max: 1.0
+- \b "~cmd_xy_max" : \b [double] XY Pos Max PID Command (abs) min: 0.0, default: 0.0, max: 1.0
+- \b "~cmd_xy_min" : \b [double] XY Pos Min PID Command (abs) min: -1.0, default: 0.0, max: 0.0
+- \b "~pid_vxy_limit" : \b [double] Limit of PID XY Speed Command (abs) min: 0.0, default: 0.0, max: 1.0
+- \b "~cmd_vxy_max" : \b [double] XY Speed Max PID Command (abs) min: 0.0, default: 0.0, max: 1.0
+- \b "~cmd_vxy_min" : \b [double] XY Speed Min PID Command (abs) min: -1.0, default: 0.0, max: 0.0
+- \b "~pid_z_limit" : \b [double] Limit of PID Z Command (abs) min: 0.0, default: 0.0, max: 1.0
+- \b "~cmd_z_max" : \b [double] Z Pos Max PID Command (abs) min: 0.0, default: 0.0, max: 1.0
+- \b "~cmd_z_min" : \b [double] Z Pos Min PID Command (abs) min: 0.0, default: 0.0, max: 1.0
+- \b "~pid_vz_limit" : \b [double] Limit of PID Z Speed Command (abs) min: 0.0, default: 0.0, max: 1.0
+- \b "~cmd_vz_max" : \b [double] Z Speed Max PID Command (abs) min: 0.0, default: 0.0, max: 1.0
+- \b "~cmd_vz_min" : \b [double] Z Speed Min PID Command (abs) min: 0.0, default: 0.0, max: 1.0
+- \b "~pid_yaw_limit" : \b [double] Limit of PID Yaw Angle Command (abs) min: 0.0, default: 0.0, max: 1.0
+- \b "~cmd_yaw_max" : \b [double] Yaw Angle Max PID Command (abs) min: 0.0, default: 0.0, max: 1.0
+- \b "~cmd_yaw_min" : \b [double] Yaw Angle Min PID Command (abs) min: 0.0, default: 0.0, max: 1.0
+

@@ -1,0 +1,17 @@
+material Checkerboard_6x4
+{
+	technique
+	{
+		pass
+		{
+			//depth_write off
+      //scene_blend alpha_blend
+
+			texture_unit
+			{
+				texture checkerboard_6x4.png
+				//filtering trilinear
+			}
+		}
+	}
+}

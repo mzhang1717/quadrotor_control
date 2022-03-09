@@ -1,0 +1,17 @@
+\subsubsection usage Usage
+\verbatim
+<node name="pose_generator" pkg="state_estimation" type="pose_generator">
+  <param name="x" type="double" value="0.0" />
+  <param name="y" type="double" value="0.0" />
+  <param name="z" type="double" value="0.0" />
+  <param name="rot_type" type="int" value="0" />
+  <param name="roll" type="double" value="0.0" />
+  <param name="pitch" type="double" value="0.0" />
+  <param name="yaw" type="double" value="0.0" />
+  <param name="qx" type="double" value="0.0" />
+  <param name="qy" type="double" value="0.0" />
+  <param name="qz" type="double" value="0.0" />
+  <param name="qw" type="double" value="1.0" />
+</node>
+\endverbatim
+

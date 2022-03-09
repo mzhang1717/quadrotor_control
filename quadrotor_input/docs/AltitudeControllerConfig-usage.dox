@@ -1,0 +1,20 @@
+\subsubsection usage Usage
+\verbatim
+<node name="quadrotor_input" pkg="quadrotor_input" type="quadrotor_input">
+  <param name="z_p" type="double" value="0.0" />
+  <param name="z_i" type="double" value="0.0" />
+  <param name="z_d" type="double" value="0.0" />
+  <param name="z_i_min" type="double" value="0.0" />
+  <param name="z_i_max" type="double" value="0.0" />
+  <param name="z_des" type="double" value="0.2" />
+  <param name="base_throttle_start" type="double" value="0.0" />
+  <param name="voltage_start" type="double" value="0.0" />
+  <param name="base_throttle_end" type="double" value="0.0" />
+  <param name="voltage_end" type="double" value="0.0" />
+  <param name="mass" type="double" value="2.0" />
+  <param name="pid_limit" type="double" value="0.0" />
+  <param name="cmd_max" type="double" value="0.0" />
+  <param name="cmd_min" type="double" value="0.0" />
+</node>
+\endverbatim
+

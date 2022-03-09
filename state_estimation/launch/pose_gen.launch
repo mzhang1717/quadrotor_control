@@ -1,0 +1,8 @@
+<launch>
+
+  <node name="pose_gen" pkg="state_estimation" type="pose_generator" respawn="false" output="screen" clear_params="true">
+    <param name="world_name" type="string" value="$(arg world)" />
+    <param name="object_name" type="string" value="$(arg object)" />
+  </node>
+
+</launch>

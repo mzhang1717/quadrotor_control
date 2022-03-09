@@ -1,0 +1,6 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~isToWaypoint" : \b [bool] Switch to waypoint following min: False, default: False, max: True
+

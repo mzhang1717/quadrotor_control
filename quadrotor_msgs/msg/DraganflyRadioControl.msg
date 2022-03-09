@@ -1,0 +1,10 @@
+std_msgs/Header header
+int16 throttle
+int16 roll
+int16 pitch
+int16 yaw
+int16 shutter
+int16 ascent
+int16 zoom
+int16 tilt
+int16 hold

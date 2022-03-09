@@ -1,0 +1,15 @@
+float64 base_throttle
+float64 scale
+float64 voltage
+geometry_msgs/Vector3 xy_error
+geometry_msgs/Vector3 vx_error
+geometry_msgs/Vector3 vy_error
+geometry_msgs/Vector3 z_error
+geometry_msgs/Vector3 vz_error
+geometry_msgs/Vector3 yaw_error
+geometry_msgs/Quaternion desired_xyz_yaw
+geometry_msgs/Quaternion current_xyz_yaw
+geometry_msgs/Vector3 desired_velocity
+geometry_msgs/Vector3 desired_acceleration
+geometry_msgs/Quaternion cmd
+geometry_msgs/Quaternion cmd_limited

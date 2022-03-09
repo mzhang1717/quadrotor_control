@@ -1,0 +1,7 @@
+\subsubsection usage Usage
+\verbatim
+<node name="fsm" pkg="fsm" type="fsm">
+  <param name="isToWaypoint" type="bool" value="False" />
+</node>
+\endverbatim
+

@@ -1,0 +1,13 @@
+<launch>
+
+  <node name="vicon_udp" pkg="simple_udp" type="vicon_udp" respawn="false" output="screen" clear_params="true">
+    <param name="position_noise" type="double" value="1.8e-08" />
+    <param name="rotation_noise" type="double" value="1.3e-06" />
+    <param name="delay_factor" type="double" value="10" />
+    <param name="publish_lag" type="int" value="0" />
+    <remap from="pose" to="vicon_pose" />
+    <remap from="pose_cov" to="vicon_pose_cov" />
+  </node>
+  
+  
+</launch>

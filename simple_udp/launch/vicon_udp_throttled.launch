@@ -1,0 +1,18 @@
+<launch>
+
+  <node name="vicon_udp" pkg="simple_udp" type="vicon_udp" respawn="false" output="screen" clear_params="true">
+    <param name="position_noise" type="double" value="1.8e-08" />
+    <param name="rotation_noise" type="double" value="1.3e-06" />
+    <param name="delay_factor" type="double" value="10" />
+    <param name="publish_lag" type="int" value="$(arg lag)" />
+    <param name="publish_rate" type="double" value="$(arg rate)" />
+    <remap from="pose" to="vicon_pose" />
+    <remap from="pose_cov" to="vicon_pose_cov" />
+  </node>
+  
+  <!--
+  <node name="$(anon throttle)" pkg="topic_tools" type="throttle" respawn="false" output="screen" args="messages vicon_pose_unthrottled $(arg rate) vicon_pose" />
+  <node name="$(anon throttle)" pkg="topic_tools" type="throttle" respawn="false" output="screen" args="messages vicon_pose_cov_unthrottled $(arg rate) vicon_pose_cov" />
+  -->
+
+</launch>

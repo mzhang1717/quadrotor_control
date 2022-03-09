@@ -1,0 +1,11 @@
+<launch>
+
+  <node name="ekf_calib_node" pkg="state_estimation" type="ekf_calib_node" respawn="false" output="screen" clear_params="true">
+    <remap from="imu" to="/x8/output/imu" />
+    <remap from="rel_pose" to="/mcptam/tracker_pose_cov" />
+    
+    <param name="sensor_offset_source" type="string" value="file" />
+    <param name="relative_pose_sensor_file" type="string" value="$(find state_estimation)/calibration/vision_pose_guess.yaml" />
+  </node>
+
+</launch>

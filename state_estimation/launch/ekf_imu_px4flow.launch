@@ -1,0 +1,16 @@
+<launch>
+
+  <node name="ekf_ground" pkg="state_estimation" type="ekf_node" respawn="false" output="screen" clear_params="true">
+    <remap from="imu" to="/x8/output/imu" />
+    <remap from="px4flow" to="/px4flow/opt_flow" />
+    <remap from="ekf_node/pose" to="x8/output/pose" />
+    <remap from="ekf_node/velocity" to="x8/output/velocity" />
+    
+    <param name="sensor_offset_source" type="string" value="file" />
+    <param name="body_velocity_sensor_file" type="string" value="$(find state_estimation)/calibration/px4flow_pose.yaml" />
+    <param name="ground_distance_sensor_file" type="string" value="$(find state_estimation)/calibration/px4flow_pose.yaml" />
+    
+    <param name="filter_frame" type="string" value="filter_px4flow" />
+  </node>
+
+</launch>

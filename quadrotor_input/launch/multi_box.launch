@@ -1,0 +1,18 @@
+<launch>
+    <arg name="debug" default="false"/>
+    <arg name="debug_prefix" value="gdb --args" if="$(arg debug)"/>
+    <arg name="debug_prefix" value="" unless="$(arg debug)"/>
+    
+    <node name="multi_box" pkg="quadrotor_input" type="multi_box" output="screen" launch-prefix="$(arg debug_prefix)">
+        
+        <rosparam param="pose_topic_list">[pose_mcptam, pose_px4flow]</rosparam>
+        <rosparam param="velocity_topic_list">[velocity_mcptam, velocity_px4flow]</rosparam>
+        
+        <remap from="pose_mcptam" to="ekf_mcptam/pose"/>
+        <remap from="velocity_mcptam" to="ekf_mcptam/velocity"/>
+        
+        <remap from="pose_px4flow" to="ekf_px4flow/pose"/>
+        <remap from="velocity_px4flow" to="ekf_px4flow/velocity"/>        
+    </node>
+
+</launch>

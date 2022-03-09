@@ -1,0 +1,23 @@
+<package>
+  <description brief="quadrotor_input">
+
+     quadrotor_input
+
+  </description>
+  <author>Adam Harmat</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/quadrotor_input</url>
+  <depend package="roscpp"/>
+  <depend package="quadrotor_msgs"/>
+  <depend package="joy"/>
+  <depend package="dynamic_reconfigure"/>
+  <depend package="tf"/>
+  <depend package="control_toolbox"/>
+  <depend package="nav_msgs"/>
+  <depend package="std_msgs"/>
+  <depend package="geometry_msgs"/>
+  
+</package>
+
+

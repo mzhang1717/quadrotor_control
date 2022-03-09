@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/mingfeng/ros_workspace/state_estimation/build/devel/setup.sh

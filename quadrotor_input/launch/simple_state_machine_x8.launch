@@ -1,0 +1,15 @@
+<launch>
+
+ <!-- simple_state_machine -->
+  <node respawn="true" pkg="quadrotor_input" type="simple_state_machine" name="simple_state_machine" >
+    <remap from="radio_control" to="joystick_converter/radio_control" />
+    <remap from="pose" to="x8/output/pose" />
+    <remap from="controller_command" to="controller/command" />
+    <remap from="simple_state_machine/autonomous_mode" to="/autonomous_mode" />
+    <param name="home_x" type="double" value="-1.8" />
+    <param name="home_y" type="double" value="0.0" />
+    <param name="home_z" type="double" value="0.27" />
+  </node>
+
+</launch>
+

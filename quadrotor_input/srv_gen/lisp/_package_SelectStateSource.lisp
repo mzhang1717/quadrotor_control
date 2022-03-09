@@ -1,0 +1,8 @@
+(cl:in-package quadrotor_input-srv)
+(cl:export '(STRPOSETOPICSELECTED-VAL
+          STRPOSETOPICSELECTED
+          STRVELOCITYTOPICSELECTED-VAL
+          STRVELOCITYTOPICSELECTED
+          BSUCCESS-VAL
+          BSUCCESS
+))

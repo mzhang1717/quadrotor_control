@@ -1,0 +1,24 @@
+<package>
+  <description brief="gazebo_quadrotor_worlds">
+
+     gazebo_quadrotor_worlds
+
+  </description>
+  <author>Adam Harmat</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/gazebo_quadrotor_worlds</url>
+  
+  <depend package="gazebo_quadrotor"/>
+  <!--
+  <depend package="gazebo_sensors"/>
+  -->
+  <depend package="gazebo"/>
+  
+  <export>
+    <gazebo plugin_path="${prefix}/lib" gazebo_media_path="${prefix}"/>
+  </export>
+
+</package>
+
+

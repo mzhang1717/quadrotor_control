@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/mingfeng/ros_workspace/fsm/build/devel/setup.sh

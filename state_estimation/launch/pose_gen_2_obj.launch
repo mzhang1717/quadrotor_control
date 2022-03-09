@@ -1,0 +1,11 @@
+<launch>
+
+  <node name="pose_gen1" pkg="state_estimation" type="pose_generator" respawn="false" output="screen" clear_params="true">
+    <param name="object_name" type="string" value="pose_gen_object1" />
+  </node>
+  
+  <node name="pose_gen2" pkg="state_estimation" type="pose_generator" respawn="false" output="screen" clear_params="true">
+    <param name="object_name" type="string" value="pose_gen_object2" />
+  </node>
+
+</launch>

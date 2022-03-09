@@ -1,0 +1,19 @@
+<launch>
+
+  <!-- Joystick converter -->
+  <include file="$(find quadrotor_input)/launch/joystick_converter.launch" />
+  
+  <!-- X8 Simple state machine -->
+  <include file="$(find quadrotor_input)/launch/simple_state_machine_x8.launch" />
+  
+  <!-- X8 position controller -->
+  <include file="$(find quadrotor_input)/launch/position_controller_x8.launch" />
+  
+  <!-- Radio control mixer -->
+  <include file="$(find quadrotor_input)/launch/radio_control_mixer.launch" />
+  
+  <!-- Draganfly converter -->
+  <include file="$(find quadrotor_input)/launch/draganfly_converter.launch" />
+
+</launch>
+

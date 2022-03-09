@@ -1,0 +1,25 @@
+<package>
+  <description brief="gazebo_quadrotor">
+
+     gazebo_quadrotor
+
+  </description>
+  <author>Adam Harmat</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/gazebo_quadrotor</url>
+  <depend package="roscpp"/>
+  <depend package="gazebo"/>
+  <depend package="quadrotor_msgs"/>
+  <depend package="control_toolbox"/>
+  <depend package="visualization_msgs"/>
+  <depend package="dynamic_reconfigure"/>
+   
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib" />
+    <gazebo plugin_path="${prefix}/lib"/>
+  </export>
+
+</package>
+
+

@@ -1,0 +1,57 @@
+#!/usr/bin/env python
+
+PACKAGE = "quadrotor_input"
+import roslib;roslib.load_manifest(PACKAGE)
+from dynamic_reconfigure.parameter_generator import *
+
+gen = ParameterGenerator()
+
+#       Name    Type    Level   Description         Default  Min   Max
+gen.add("xy_p", double_t, 0, "XY Pos Proportional Gain", 0, 0.0, 10.0)
+gen.add("xy_i", double_t, 0, "XY Pos Integral Gain", 0.0, 0.0, 10.0)
+gen.add("xy_d", double_t, 0, "XY Pos Derivative Gain", 0.0, 0.0, 10.0)
+gen.add("xy_i_min", double_t, 0, "XY Pos Integral Min Limit", 0.0, -1000.0, 0.0)
+gen.add("xy_i_max", double_t, 0, "XY Pos Integral Max Limit", 0.0, 0.0, 1000.0)
+gen.add("pid_xy_limit", double_t, 0, "Limit of PID XY Command (abs)", 0, 0, 1.0)
+gen.add("cmd_xy_max", double_t, 0, "XY Pos Max PID Command (abs)", 0, 0, 1.0)
+gen.add("cmd_xy_min", double_t, 0, "XY Pos Min PID Command (abs)", 0, -1.0, 0)
+
+gen.add("z_p", double_t, 0, "Z Pos Proportional Gain", 0, 0.0, 10.0)
+gen.add("z_i", double_t, 0, "Z Pos Integral Gain", 0.0, 0.0, 10.0)
+gen.add("z_d", double_t, 0, "Z Pos Derivative Gain", 0.0, 0.0, 10.0)
+gen.add("z_i_min", double_t, 0, "Z Pos Integral Min Limit", 0.0, -1000.0, 0.0)
+gen.add("z_i_max", double_t, 0, "Z Pos Integral Max Limit", 0.0, 0.0, 1000.0)
+gen.add("pid_z_limit", double_t, 0, "Limit of PID Z Command (abs)", 0, 0, 1.0)
+gen.add("cmd_z_max", double_t, 0, "Z Pos Max PID Command (abs)", 0, 0, 1.0)
+gen.add("cmd_z_min", double_t, 0, "Z Pos Min PID Command (abs)", 0, 0, 1.0)
+
+gen.add("base_throttle_start", double_t, 0, "Base Throttle Start", 0, 0, 1.0)
+gen.add("voltage_start", double_t, 0, "Voltage Start", 0, 10.0, 20.0)
+gen.add("base_throttle_end", double_t, 0, "Base Throttle End", 0, 0, 1.0)
+gen.add("voltage_end", double_t, 0, "Voltage End", 0, 10.0, 20.0)
+gen.add("mass", double_t, 0, "Aircraft Mass", 2.0, 0.1, 10.0)
+
+gen.add("z_des", double_t, 0, "Z position", 0.2, -2.0, 10.0)
+gen.add("xy_active",  bool_t, 0, "XY control active", False)
+gen.add("x_des", double_t, 0, "X position", 0.0, -5.0, 5.0)
+gen.add("y_des", double_t, 0, "Y position", 0.0, -5.0, 5.0
+
+gen.add("vxy_p", double_t, 0, "XY Speed Proportional Gain", 0, 0.0, 10.0)
+gen.add("vxy_i", double_t, 0, "XY Speed Integral Gain", 0.0, 0.0, 10.0)
+gen.add("vxy_d", double_t, 0, "XY Speed Derivative Gain", 0.0, 0.0, 10.0)
+gen.add("vxy_i_min", double_t, 0, "XY Speed Integral Min Limit", 0.0, -1000.0, 0.0)
+gen.add("vxy_i_max", double_t, 0, "XY Speed Integral Max Limit", 0.0, 0.0, 1000.0)
+gen.add("pid_vxy_limit", double_t, 0, "Limit of PID XY Speed Command (abs)", 0, 0, 1.0)
+gen.add("cmd_vxy_max", double_t, 0, "XY Speed Max PID Command (abs)", 0, 0, 1.0)
+gen.add("cmd_vxy_min", double_t, 0, "XY Speed Min PID Command (abs)", 0, -1.0, 0)
+
+gen.add("vz_p", double_t, 0, "Z Speed Proportional Gain", 0, 0.0, 10.0)
+gen.add("vz_i", double_t, 0, "Z Speed Integral Gain", 0.0, 0.0, 10.0)
+gen.add("vz_d", double_t, 0, "Z Speed Derivative Gain", 0.0, 0.0, 10.0)
+gen.add("vz_i_min", double_t, 0, "Z Speed Integral Min Limit", 0.0, -1000.0, 0.0)
+gen.add("vz_i_max", double_t, 0, "Z Speed Integral Max Limit", 0.0, 0.0, 1000.0)
+gen.add("pid_vz_limit", double_t, 0, "Limit of PID Z Speed Command (abs)", 0, 0, 1.0)
+gen.add("cmd_vz_max", double_t, 0, "Z Speed Max PID Command (abs)", 0, 0, 1.0)
+gen.add("cmd_vz_min", double_t, 0, "Z Speed Min PID Command (abs)", 0, 0, 1.0)
+
+exit(gen.generate(PACKAGE, "quadrotor_input", "PositionController"))

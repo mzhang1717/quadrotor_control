@@ -1,0 +1,11 @@
+<launch>
+
+ <!-- simple_state_machine -->
+  <node respawn="true" pkg="quadrotor_input" type="radio_control_mixer" name="radio_control_mixer" >
+    <remap from="joystick" to="joystick_converter/radio_control" />
+    <remap from="controller" to="controller/radio_control" />
+    <remap from="autonomous" to="simple_state_machine/autonomous_mode" />
+  </node>
+
+</launch>
+

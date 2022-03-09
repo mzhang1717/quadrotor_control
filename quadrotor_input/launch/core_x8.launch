@@ -1,0 +1,13 @@
+<launch>
+
+  <!-- Joystick converter -->
+  <include file="$(find quadrotor_input)/launch/joystick_converter.launch" />
+  
+  <!-- Radio control mixer -->
+  <include file="$(find quadrotor_input)/launch/radio_control_mixer.launch" />
+  
+  <!-- Draganfly converter -->
+  <include file="$(find quadrotor_input)/launch/draganfly_converter.launch" />
+
+</launch>
+

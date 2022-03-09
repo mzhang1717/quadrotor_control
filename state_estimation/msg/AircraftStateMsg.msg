@@ -1,0 +1,10 @@
+Header header
+geometry_msgs/Point position
+geometry_msgs/Quaternion rotation
+geometry_msgs/Vector3 velocity
+geometry_msgs/Vector3 accel_bias
+geometry_msgs/Vector3 gyro_bias
+geometry_msgs/Quaternion rot_r
+geometry_msgs/Point pos_c
+geometry_msgs/Quaternion rot_c
+float64[] covariance

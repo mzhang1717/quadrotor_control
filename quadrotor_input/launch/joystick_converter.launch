@@ -1,0 +1,34 @@
+<launch>
+
+ <!-- joy node -->
+  <node respawn="true" pkg="joy" type="joy_node" name="joy_node" >
+    <param name="dev" type="string" value="/dev/input/js0" />
+    <param name="autorepeat_rate" type="double" value="50" />
+    <param name="deadzone" value="0.02" />
+  </node>
+
+ <!-- joystick_converter -->
+  <node pkg="quadrotor_input" type="joystick_converter" name="joystick_converter" clear_params="true" output="screen">
+    
+    <param name="axis_throttle" type="int" value="4" />  <!-- old: 0 -->
+    <param name="axis_roll" type="int" value="3" />      <!-- old: 1 -->
+    <param name="axis_pitch" type="int" value="5" />     <!-- old: 2 -->
+    <param name="axis_yaw" type="int" value="2" />       <!-- old: 5 -->
+    <param name="axis_flap" type="int" value="0" />      <!-- old: 4 -->
+    <param name="axis_gear" type="int" value="1" />      <!-- old: 3 -->
+    
+    <param name="c0" type="double" value="0.25163399" />
+    <param name="c1" type="double" value="0.29673203" />
+    <param name="c2" type="double" value="-0.45163399" />
+    <param name="c3" type="double" value="0.50326797" />
+    
+    <param name="flip_throttle" type="bool" value="true" />
+    <param name="flip_roll" type="bool" value="true" />
+    <param name="flip_pitch" type="bool" value="true" />
+    <param name="flip_yaw" type="bool" value="true" />
+    <param name="flip_flap" type="bool" value="true" />
+    <param name="flip_gear" type="bool" value="true" />
+  </node>
+
+</launch>
+

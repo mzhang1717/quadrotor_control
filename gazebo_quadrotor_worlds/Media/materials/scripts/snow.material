@@ -1,0 +1,17 @@
+material Snow1
+{
+	technique
+	{
+		pass
+		{
+			//depth_write off
+      //scene_blend alpha_blend
+
+			texture_unit
+			{
+				texture snow1.jpg
+				//filtering trilinear
+			}
+		}
+	}
+}

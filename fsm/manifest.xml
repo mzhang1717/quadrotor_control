@@ -1,0 +1,25 @@
+<package>
+  <description brief="fsm">
+
+     fsm
+
+  </description>
+  <author>Riko</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/fsm</url>
+  <depend package="smach"/>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+  <depend package="smach_ros"/>
+  <depend package="quadrotor_msgs"/>
+  <depend package="smach_msgs"/>
+  <depend package="roslib"/>
+<!--
+  <depend package="xdot"/>
+-->
+  <depend package="quadrotor_input"/> 
+  <depend package="dynamic_reconfigure"/>
+</package>
+
+

@@ -1,0 +1,35 @@
+material UV_Test
+{
+	technique
+	{
+		pass
+		{
+			depth_write off
+      scene_blend alpha_blend
+
+			texture_unit
+			{
+				texture uv_test.png
+				//filtering trilinear
+			}
+		}
+	}
+}
+
+material Demo_Buildling
+{
+	technique
+	{
+		pass
+		{
+			depth_write off
+      scene_blend alpha_blend
+
+			texture_unit
+			{
+				texture demo_building.png
+				//filtering trilinear
+			}
+		}
+	}
+}

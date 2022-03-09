@@ -1,0 +1,25 @@
+<package>
+  <description brief="state_estimation">
+
+     state_estimation
+
+  </description>
+  <author>Adam Harmat</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/state_estimation</url>
+  <depend package="roscpp"/>
+  <!--depend package="gps_common"/-->
+  <depend package="sensor_msgs"/>
+  <depend package="tf"/>
+  <!-- <depend package="ssf_updates"/> -->
+  <depend package="quadrotor_msgs"/>
+  <depend package="visualization_msgs"/>
+  <depend package="dynamic_reconfigure"/>
+  <!--depend package="common_rosdeps" /-->
+
+  <rosdep name="yaml-cpp" />
+
+</package>
+
+

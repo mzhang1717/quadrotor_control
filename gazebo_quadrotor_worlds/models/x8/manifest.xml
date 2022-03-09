@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<model>
+  <name>box</name>
+  <version>1.3</version>
+  <sdf>x8.model</sdf>
+
+  <author>
+    <name>Adam Harmat</name>
+    <email>aharmat@gmail.com</email>
+  </author>
+
+  <description>
+    X8
+  </description>
+</model>

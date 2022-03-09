@@ -1,0 +1,157 @@
+<launch>
+
+  <!-- Altitude controller -->
+  <node pkg="quadrotor_input" type="position_controller" name="controller" clear_params="true"  > 
+  
+<!--
+    <remap from="pose" to="x8/output/pose" />
+    <remap from="velocity" to="x8/output/velocity" />
+-->
+    <remap from="pose" to="multi_box/pose" />
+    <remap from="velocity" to="multi_box/velocity" />
+    
+    <remap from="battery" to="x8/output/battery" />
+    <param name="nominal_pose_rate" type="double" value="2" />
+    <param name="nominal_velocity_rate" type="double" value="2" />
+    <param name="nominal_battery_rate" type="double" value="0.2" />
+    <param name="rate" type="double" value="50" />
+    
+    <!-- param name="base_throttle_start" type="double" value="0.348" / -->
+    <!-- param name="base_throttle_end" type="double" value="0.467" / -->
+    <!-- param name="voltage_start" type="double" value="15.0" / -->
+    <!-- param name="voltage_end" type="double" value="13.0" / -->
+    
+    <!-- param name="base_throttle_start" type="double" value="0.4579" /-->
+    <!-- param name="base_throttle_end" type="double" value="0.5362" /-->    
+    <!-- param name="voltage_start" type="double" value="15.8" /-->
+    <!-- param name="voltage_end" type="double" value="13.5" /-->
+
+    <param name="base_throttle_start" type="double" value="0.4638" />;
+    <param name="base_throttle_end" type="double" value="0.5323" />    
+    <param name="voltage_start" type="double" value="15.0" />
+    <param name="voltage_end" type="double" value="13.5" />
+    
+    <param name="mass" type="double" value="2.545" />
+    
+
+    <param name="ctrl_xy_p" type="double" value="0.3" />
+    <param name="ctrl_xy_i" type="double" value="0.1" />
+    <param name="ctrl_xy_d" type="double" value="0.0" />
+    <param name="ctrl_xy_i_max" type="double" value="0.1" />
+    <param name="ctrl_xy_i_min" type="double" value="-0.1" />    
+
+    
+    
+<!--
+    <param name="ctrl_xy_p" type="double" value="0.3" />
+    <param name="ctrl_xy_i" type="double" value="0.1" />
+    <param name="ctrl_xy_d" type="double" value="0.0" />
+    <param name="ctrl_xy_i_max" type="double" value="0.2" />
+    <param name="ctrl_xy_i_min" type="double" value="-0.2" />
+-->
+ 
+    <param name="pid_xy_limit" type="double" value="1000" />
+    <param name="cmd_xy_max" type="double" value="1000" />
+    <param name="cmd_xy_min" type="double" value="-1000" />
+
+
+    <param name="ctrl_vxy_p" type="double" value="1.8" />
+    <param name="ctrl_vxy_i" type="double" value="0.2" />
+    <param name="ctrl_vxy_d" type="double" value="0.0" />
+    <param name="ctrl_vxy_i_max" type="double" value="0.2" />
+    <param name="ctrl_vxy_i_min" type="double" value="-0.2" />
+
+
+    
+<!--
+    <param name="ctrl_vxy_p" type="double" value="3.0" />
+    <param name="ctrl_vxy_i" type="double" value="0.4" />
+    <param name="ctrl_vxy_d" type="double" value="0.0" />
+    <param name="ctrl_vxy_i_max" type="double" value="0.8" />
+    <param name="ctrl_vxy_i_min" type="double" value="-0.8" />
+-->
+
+    <param name="pid_vxy_limit" type="double" value="1000" />
+    <param name="cmd_vxy_max" type="double" value="1000" />
+    <param name="cmd_vxy_min" type="double" value="-1000" />
+    
+    <param name="ctrl_z_p" type="double" value="1.0" />
+    <param name="ctrl_z_i" type="double" value="0.0" />
+    <param name="ctrl_z_d" type="double" value="0.0" />
+    <param name="ctrl_z_i_max" type="double" value="10.0" />
+    <param name="ctrl_z_i_min" type="double" value="-10.0" />
+    
+    <param name="pid_z_limit" type="double" value="1000" />
+    <param name="cmd_z_max" type="double" value="1000" />
+    <param name="cmd_z_min" type="double" value="-1000" />
+
+    <param name="ctrl_vz_p" type="double" value="1.1" />
+    <param name="ctrl_vz_i" type="double" value="0.9" />
+    <param name="ctrl_vz_d" type="double" value="0.0" />
+    <param name="ctrl_vz_i_max" type="double" value="1.0" />
+    <param name="ctrl_vz_i_min" type="double" value="-1.0" />
+    
+    <param name="pid_vz_limit" type="double" value="1000" />
+    <param name="cmd_vz_max" type="double" value="0.8" />
+    <param name="cmd_vz_min" type="double" value="0.0" />
+    
+    <param name="ctrl_yaw_p" type="double" value="0.5" />
+    <param name="ctrl_yaw_i" type="double" value="0.1" />
+    <param name="ctrl_yaw_d" type="double" value="0.0" />
+    <param name="ctrl_yaw_i_max" type="double" value="0.1" />
+    <param name="ctrl_yaw_i_min" type="double" value="-0.1" />
+
+    <param name="pid_yaw_limit" type="double" value="1000" />
+    <param name="cmd_yaw_max" type="double" value="1000" />
+    <param name="cmd_yaw_min" type="double" value="-1000" />
+    
+    <param name="tol_position" type="double" value="0.01" />
+    <param name="tol_yaw" type="double" value="0.08" />
+    
+    <param name="xyspeedLimit" type="double" value="1.0" />
+    <param name="zspeedLimit" type="double" value="0.4" />
+    
+    <param name="ascendingSpeedMax" type="double" value="0.2" />
+    <param name="descendingSpeedMax" type="double" value="0.12" />
+    <param name="touchdownSpeedMax" type="double" value="0.04" />
+    
+    <param name="pitchLimit" type="double" value="0.3" />
+    <param name="rollLimit" type="double" value="0.3" />
+    <param name="yawrateLimit" type="double" value="0.3" />
+    <param name="throttleHighLimit" type="double" value="0.8" />
+    <param name="throttleLowLimit" type="double" value="0.0" />  
+    
+    <param name="scaleRP" type="double" value="34.0" />  
+
+    <!-- param name="tau_p" type="double" value="0.15" /--> 
+    <!-- param name="tau_i" type="double" value="0.0" /--> 
+    <!-- param name="tau_d" type="double" value="0.0" /--> 
+
+    <!-- param name="tau_f" type="double" value="20" /--> 
+    <!-- param name="tau_k" type="double" value="0.4" /--> 
+    
+    
+    <!-- Tau controller - Ben -->
+    <param name="tau_enabled" type="bool" value="0" />
+    <param name="vertical_tau_only" type="bool" value="1" />
+
+    <param name="kz" type="double" value="0.3" />
+    <param name="kp" type="double" value="0.45" />
+
+    <param name="kp_x" type="double" value="0.0" />
+    <param name="ki_x" type="double" value="0.0" />
+    <param name="kd_x" type="double" value="0.0" />
+    <param name="kp_z" type="double" value="0.0" />
+    <param name="ki_z" type="double" value="0.0" />
+    <param name="kd_z" type="double" value="0.0" />
+
+    <param name="tf" type="double" value="10" />
+    <param name="t_offset" type="double" value="0.1" />
+    <param name="vertical_offset" type="double" value="0.5" />
+    <param name="horizontal_offset" type="double" value="0" />
+    <param name="xSaturationLimit" type="double" value="100" />
+
+  </node>
+
+</launch>
+

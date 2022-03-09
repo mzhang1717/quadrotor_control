@@ -1,0 +1,17 @@
+<package>
+  <description brief="quadrotor_msgs">
+
+     quadrotor_msgs
+
+  </description>
+  <author>Adam Harmat</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/quadrotor_msgs</url>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="geometry_msgs"/>
+
+</package>
+
+

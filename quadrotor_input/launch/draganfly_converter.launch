@@ -1,0 +1,10 @@
+<launch>
+
+ <!-- simple_state_machine -->
+  <node respawn="true" pkg="quadrotor_input" type="draganfly_converter" name="draganfly_converter" >
+    <remap from="input" to="radio_control_mixer/radio_control" />
+    <remap from="output" to="x8/input/radio_control" />
+  </node>
+
+</launch>
+

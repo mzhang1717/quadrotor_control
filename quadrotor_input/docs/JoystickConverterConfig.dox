@@ -1,0 +1,10 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~input1" : \b [double] Point 1 Input min: -1.0, default: 0.0, max: 1.0
+- \b "~output1" : \b [double] Point 1 Ouput min: -1.0, default: 0.0, max: 1.0
+- \b "~input2" : \b [double] Point 2 Input min: -1.0, default: 0.0, max: 1.0
+- \b "~output2" : \b [double] Point 2 Ouput min: -1.0, default: 0.0, max: 1.0
+- \b "~output3" : \b [double] Point 3 Ouput min: -1.0, default: 0.0, max: 1.0
+

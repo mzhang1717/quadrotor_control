@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/mingfeng/ros_workspace/gazebo_quadrotor_worlds/build/devel/setup.sh

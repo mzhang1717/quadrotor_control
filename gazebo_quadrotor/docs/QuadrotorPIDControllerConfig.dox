@@ -1,0 +1,14 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~roll_p" : \b [double] Roll Proportional Gain min: 0.0, default: 0.1, max: 100.0
+- \b "~roll_i" : \b [double] Roll Integral Gain min: 0.0, default: 0.0, max: 100.0
+- \b "~roll_d" : \b [double] Roll Derivative Gain min: 0.0, default: 0.0, max: 100.0
+- \b "~pitch_p" : \b [double] Pitch Proportional Gain min: 0.0, default: 0.1, max: 100.0
+- \b "~pitch_i" : \b [double] Pitch Integral Gain min: 0.0, default: 0.0, max: 100.0
+- \b "~pitch_d" : \b [double] Pitch Derivative Gain min: 0.0, default: 0.0, max: 100.0
+- \b "~yaw_p" : \b [double] Yaw Proportional Gain min: 0.0, default: 0.1, max: 100.0
+- \b "~yaw_i" : \b [double] Yaw Integral Gain min: 0.0, default: 0.0, max: 100.0
+- \b "~yaw_d" : \b [double] Yaw Derivative Gain min: 0.0, default: 0.0, max: 100.0
+

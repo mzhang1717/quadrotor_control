@@ -1,0 +1,11 @@
+float64 p_error
+float64 i_error
+float64 d_error
+float64 cmd
+float64 cmd_limited
+float64 z
+float64 z_des
+float64 base_throttle
+float64 throttle
+float64 scale
+float64 voltage

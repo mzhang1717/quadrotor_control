@@ -1,0 +1,19 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~z_p" : \b [double] Z Pos Proportional Gain min: 0.0, default: 0.0, max: 1000.0
+- \b "~z_i" : \b [double] Z Pos Integral Gain min: 0.0, default: 0.0, max: 100.0
+- \b "~z_d" : \b [double] Z Pos Derivative Gain min: 0.0, default: 0.0, max: 100.0
+- \b "~z_i_min" : \b [double] Z Pos Integral Min Limit min: -1000.0, default: 0.0, max: 0.0
+- \b "~z_i_max" : \b [double] Z Pos Integral Max Limit min: 0.0, default: 0.0, max: 1000.0
+- \b "~z_des" : \b [double] Z position min: -2.0, default: 0.2, max: 10.0
+- \b "~base_throttle_start" : \b [double] Base Throttle Start min: 0.0, default: 0.0, max: 1.0
+- \b "~voltage_start" : \b [double] Voltage Start min: 10.0, default: 0.0, max: 20.0
+- \b "~base_throttle_end" : \b [double] Base Throttle End min: 0.0, default: 0.0, max: 1.0
+- \b "~voltage_end" : \b [double] Voltage End min: 10.0, default: 0.0, max: 20.0
+- \b "~mass" : \b [double] Aircraft Mass min: 0.1, default: 2.0, max: 10.0
+- \b "~pid_limit" : \b [double] Limit of PID Command (abs) min: 0.0, default: 0.0, max: 1.0
+- \b "~cmd_max" : \b [double] Maximum overall throttle min: 0.0, default: 0.0, max: 1.0
+- \b "~cmd_min" : \b [double] Minimum overall throttle min: 0.0, default: 0.0, max: 1.0
+

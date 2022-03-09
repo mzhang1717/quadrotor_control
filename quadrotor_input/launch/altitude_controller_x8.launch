@@ -1,0 +1,31 @@
+<launch>
+
+  <!-- Altitude controller -->
+  <node pkg="quadrotor_input" type="altitude_controller" name="controller" clear_params="true" output="screen">
+  
+    <remap from="pose" to="x8/output/pose" />
+    <remap from="velocity" to="x8/output/velocity" />
+    <remap from="battery" to="x8/output/battery" />
+    <param name="nominal_pose_rate" type="double" value="5" />
+    <param name="nominal_velocity_rate" type="double" value="5" />
+    <param name="nominal_battery_rate" type="double" value="0.2" />
+    <param name="rate" type="double" value="50" />
+    <param name="ctrl_p" type="double" value="0.25" />
+    <param name="ctrl_i" type="double" value="0.001" />
+    <param name="ctrl_d" type="double" value="0.15" />
+    <param name="ctrl_i_max" type="double" value="1" />
+    <param name="ctrl_i_min" type="double" value="-1" />
+    <param name="base_throttle_start" type="double" value="0.348" />
+    <param name="base_throttle_end" type="double" value="0.467" />
+    <param name="voltage_start" type="double" value="15.0" />
+    <param name="voltage_end" type="double" value="13.0" />
+    <param name="mass" type="double" value="2.6" />
+    <param name="pid_limit" type="double" value="1.0" />
+    <param name="cmd_max" type="double" value="0.55" />
+    <param name="cmd_min" type="double" value="0.19" />
+
+    
+  </node>
+
+</launch>
+
