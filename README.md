@@ -1,8 +1,8 @@
 # Introduction
 This package provides a flight control and task management system for 
 a quadrotor. It enables stable hovering, take-off, landing, path-following, 
-and anti-wind manoeuvres. This system was extensively tested in a variety of indoor and outdoor
-environment using a Dragangly X8 quadrotor.
+and anti-wind manoeuvres. This system was extensively tested with a visual-SLAM system in a variety of indoor and outdoor
+environments using a Dragangly X8 quadrotor. More details can be found in [this paper](http://ncfrn.cim.mcgill.ca:8080/pub/2014/sharf-autonomous_flight_mult_camera_vSLAM.pdf).
 
 ![](resources/X8_04_small.jpg)
 **Figure 1:** Draganfly X8 quadrotor in flight
@@ -28,25 +28,28 @@ accordingly.
 ![](resources/x8_fsm.png)
 **Figure 4:** Task Management based on FSM
 
-# Running the flight controller & task manager with Gazebo & ROS
+# Run with Gazebo & ROS
 
-## Start ROS
+- Start ROS
 `roscore`
 
-## Recalibrate the joystick
+- Recalibrate the joystick
 `./quadrotor_input/calibration/sim_stick.cal`
 
-## Start ROSGui
+- Start ROS GUI
 `rqt`
 
-## Start SMACH Viewer
+- Start SMACH Viewer
 `rosrun smach_viewer smach_viewer.py1`
 
-## Start Gazebo
+- Start Gazebo
 `roslaunch gazebo_quadrotor_worlds x8.launch` 
 
-## Start the scenario
+- Start the scenario
 `roslaunch quadrotor_input autopilot_scenario_position_x8.launch`
+
+# Reference
+- [Autonomous Flight of a Quadrotor Using Multi-Camera Visual SLAM](http://ncfrn.cim.mcgill.ca:8080/pub/2014/sharf-autonomous_flight_mult_camera_vSLAM.pdf)
 
 [//]: # (Scenarios to be tested on the Gazebo prior to experimental flight:)
 
